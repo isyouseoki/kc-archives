@@ -1,0 +1,415 @@
+.lobby {
+    min-height: 150vh;
+
+    width: 100%;
+
+    background-image: url("../assets/images/fone.jpg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    
+}
+
+/* Затемнение поверх фона */
+
+.lobby::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    z-index: 0;
+}
+
+
+
+.hero h1,
+.hero p,
+.doors{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.navbar {
+
+    position: fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    padding:10px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+    background:rgba(0,0,0,0.65);
+
+    transition:.4s ease;
+
+    z-index:100;
+
+
+}
+.navbar{
+    z-index:1000;
+}
+
+.dropdownMenu{
+  position:fixed;
+
+    top:58px;
+
+    right:0;
+
+    width:220px;
+
+    padding:18px;
+
+}
+.navbar.scrolled {
+
+    background:rgba(0,0,0,0.25);
+
+    backdrop-filter:blur(5px);
+
+}
+
+.logo{
+    color: rgba(255, 255, 255, 0.786);
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.menuButton{
+    background: none;
+    border: none;
+
+    color: rgba(255, 255, 255, 0.599);
+    font-size: 32px;
+
+    cursor: pointer;
+}
+
+.hero{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 130px;
+      color: white;
+
+}
+
+.lobby h1{
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 78px;
+
+    font-weight: 800;
+
+    letter-spacing: 12px;
+      color: rgba(255, 255, 255, 0.818);
+
+    text-transform: uppercase;
+    margin-bottom: 25px;
+
+    
+    animation: glow 2s infinite alternate;
+
+}
+
+
+@keyframes glow{
+
+    from{
+
+        text-shadow:
+        0 0 10px rgba(228, 247, 117, 0.307),
+        0 0 20px rgba(255,255,255,.3);
+
+    }
+
+    to{
+
+        text-shadow:
+        0 0 15px rgba(242, 253, 91, 0.492),
+        0 0 35px rgba(255,255,255,.5);
+
+    }
+
+
+}
+
+.hero p{
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 26px;
+
+    font-weight: 500;
+
+    letter-spacing:1px;
+    margin-bottom: 50px;    
+}
+
+
+
+.doors {
+    margin-top: 40px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    gap: 70px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+.doorCard {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+
+.door {
+
+    width: 160px;
+
+    transition: .35s ease;
+
+    cursor: pointer;
+
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,.5));
+
+}
+
+
+
+.door:hover {
+
+    transform: scale(1.08);
+
+    filter:
+        drop-shadow(0 0 20px rgba(255,255,180,.9))
+        drop-shadow(0 10px 25px rgba(0,0,0,.6));
+
+}
+
+
+.doorCard h3 {
+
+    margin-top: 18px;
+
+    color: rgba(255, 255, 255, 0.937);
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-shadow: 0 0 10px rgba(0,0,0,.8);
+
+}
+
+.dropdownMenu {
+
+    position: fixed;
+
+    top: 80px;
+
+    right: 40px;
+
+    background: rgba(0,0,0,0.7);
+
+    backdrop-filter: blur(10px);
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    z-index:200;
+
+}
+
+
+.dropdownMenu a {
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+}
+
+
+.dropdownMenu a:hover {
+
+    color:#ffe97a;
+
+}
+
+/* текст ниже страницы */
+
+.footer{
+
+    width:100%;
+
+    margin-top:auto;
+
+    padding:40px 0 20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    z-index:2;
+
+}
+
+.footer h2{
+
+    font-size:15px;
+
+    color:rgba(255,255,255,.45);
+
+    letter-spacing:3px;
+
+    margin-bottom:8px;
+
+    font-weight:350 px;
+
+}
+
+.footerDescription{
+
+    max-width:330px;
+
+    font-size:13px;
+
+    color:rgba(255,255,255,.35);
+
+    line-height:1.0;
+
+    letter-spacing:1px;
+
+    margin-bottom:15px;
+
+}
+
+.footerLinks{
+
+    display:flex;
+
+    gap:14px;
+
+    margin-bottom:5px;
+
+}
+
+.footerLinks a{
+
+    font-size:25px;
+
+    color:rgba(255,255,255,.55);
+
+    transition:.3s;
+
+}
+
+.footerLinks a:hover{
+
+    color:white;
+
+}
+
+.copyright{
+
+    font-size:15px;
+
+    color:rgba(255,255,255,.25);
+
+    line-height:1.6;
+
+}
+
+.archiveLogos{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:75px;
+
+    margin:15px 0 20px;
+
+}
+
+
+.archiveLogos img{
+
+    width:160px;
+
+    height:auto;
+
+    opacity:0.45;
+
+    filter:
+        drop-shadow(0 0 8px rgba(255,255,255,.2));
+
+    transition:.3s ease;
+
+}
+
+
+.archiveLogos img:hover{
+
+    opacity:0.8;
+
+    transform:scale(1.1);
+
+}
