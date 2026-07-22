@@ -2,13 +2,16 @@
   "name": "kc-archives",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://isyouseoki.github.io/kc-archives/",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "oxlint",
-    "preview": "vite preview"
-  },
+  "dev": "vite",
+  "build": "vite build",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist",
+  "lint": "oxlint",
+  "preview": "vite preview"
+},
   "dependencies": {
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
