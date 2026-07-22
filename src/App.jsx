@@ -4,11 +4,12 @@ import Room from "./pages/Room";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/kc-archives">
       <Routes>
-        <Route path="/" element={<Lobby />} />
-        <Route path="/room/:artist" element={<Room />} />
-      </Routes>
+      <Route path="/" element={<Lobby />} />
+      <Route path="/kc-archives/" element={<Lobby />} />
+      <Route path="/room/:artist" element={<Room />} />
+    </Routes>
     </BrowserRouter>
   );
 }

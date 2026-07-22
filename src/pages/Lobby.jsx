@@ -1,34 +1,36 @@
 import "./Lobby.css";
 import { useState, useEffect } from "react";
 import { FaTelegramPlane, FaInstagram, FaGithub } from "react-icons/fa";
+import logo1 from "../assets/images/logo1.png";
+import logo2 from "../assets/images/logo2.png";
+
 
 const rooms = [
   {
     id: 1,
     name: "SIK-K",
-    image: "/images/doors/closed.png",
+    image: `${import.meta.env.BASE_URL}images/doors/closed.png`,
   },
   {
     id: 2,
     name: "HAON",
-    image: "/images/doors/closed.png",
+    image: `${import.meta.env.BASE_URL}images/doors/closed.png`,
   },
   {
     id: 3,
     name: "JMIN",
-    image: "/images/doors/closed.png",
+    image: `${import.meta.env.BASE_URL}images/doors/closed.png`,
   },
   {
     id: 4,
     name: "NOWIMYOUNG",
-    image: "/images/doors/closed.png",
+    image: `${import.meta.env.BASE_URL}images/doors/closed.png`,
   },
   {
     id: 5,
     name: "KC",
-    image: "/images/doors/closed.png",
-  },
-];
+    image: `${import.meta.env.BASE_URL}images/doors/closed.png`,
+},];
 
 function Lobby() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -125,15 +127,15 @@ function Lobby() {
 
       <div className="archiveLogos">
 
-          <img 
-            src="/src/assets/images/logo1.png"
-            alt="KC logo"
-          />
+        <img 
+          src={logo1}
+          alt="KC logo"
+        />
 
-          <img 
-            src="/src/assets/images/logo2.png"
-            alt="Creator logo"
-          />
+        <img 
+          src={logo2}
+         alt="Creator logo"
+        />
 
       </div>
 
